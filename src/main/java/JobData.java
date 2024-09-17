@@ -107,6 +107,10 @@ public class JobData {
             for (String col : row.values()) {
                 if (col.contains(value)) {
                     jobs.add(row);
+                } else {
+                    if (col.equalsIgnoreCase(value)) {
+                        jobs.add(row);
+                    }
                 }
             }
         }
