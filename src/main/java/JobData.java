@@ -77,7 +77,13 @@ public class JobData {
 
             if (aValue.contains(value)) {
                 jobs.add(row);
+            } else {
+                if (aValue.equalsIgnoreCase(value)) {
+                    jobs.add(row);
+                }
             }
+
+
         }
 
         return jobs;
