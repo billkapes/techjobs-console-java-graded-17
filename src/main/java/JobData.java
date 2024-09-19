@@ -78,13 +78,6 @@ public class JobData {
             if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
-//            else {
-//                if (aValue.equalsIgnoreCase(value)) {
-//                    jobs.add(row);
-//                }
-//            }
-
-
         }
 
         return jobs;
@@ -101,19 +94,16 @@ public class JobData {
         // load data, if not already loaded
         loadData();
 
-        // TODO - implement this method
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
+
             for (String col : row.values()) {
+
                 if (col.toLowerCase().contains(value.toLowerCase())) {
                     jobs.add(row);
+                    break;
                 }
-//                else {
-//                    if (col.equalsIgnoreCase(value)) {
-//                        jobs.add(row);
-//                    }
-//                }
             }
         }
 
